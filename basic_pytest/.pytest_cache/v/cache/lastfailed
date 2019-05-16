@@ -1,0 +1,5 @@
+{
+  "test_learnPytest.py::test_ass": true,
+  "test_learnPytest.py::test_firstFunc": true,
+  "test_learnPytest.py::test_secondFunc": true
+}
