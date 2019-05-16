@@ -8,7 +8,6 @@ from appium.webdriver.common.touch_action import TouchAction
 from appium.webdriver.webdriver import WebDriver
 
 # 注释由于测试提交
-# 111222
 class TestXueqiu_homework(object):
     driver = WebDriver
 
