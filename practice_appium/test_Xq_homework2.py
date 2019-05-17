@@ -9,6 +9,7 @@ from appium.webdriver.webdriver import WebDriver
 
 # 注释由于测试提交
 # dev branch added
+# check
 class TestXueqiu_homework(object):
     driver = WebDriver
 
