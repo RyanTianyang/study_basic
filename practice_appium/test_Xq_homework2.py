@@ -12,6 +12,7 @@ from appium.webdriver.webdriver import WebDriver
 # check
 # again
 # fast forward
+# ggod
 class TestXueqiu_homework(object):
     driver = WebDriver
 
