@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# !/usr/bin/env python
 # encoding: utf-8
 from appium.webdriver.common.mobileby import MobileBy
 import pytest
@@ -13,7 +13,7 @@ class Test_webView_homeWork(object):
 
     @classmethod
     def setup_class(cls):
-        cls.driver=cls.install_app()
+        cls.driver = cls.install_app()
 
     def setup_method(self):
         self.driver = Test_webView_homeWork.restart_app()
@@ -39,7 +39,7 @@ class Test_webView_homeWork(object):
             EC.presence_of_element_located((MobileBy.ACCESSIBILITY_ID, "使用密码登录")))
         self.driver.find_element_by_accessibility_id("使用密码登录").click()
 
-        self.driver.find_element_by_id("telno").send_keys("9898")
+        self.driver.find_element_by_id("telno").send_keys("0909")
         self.driver.find_element_by_id("pass").send_keys("xxxxxxxx")
 
         self.driver.find_element_by_accessibility_id("安全登录").click()
@@ -74,7 +74,7 @@ class Test_webView_homeWork(object):
             "appPackage": "com.xueqiu.android",
             "appActivity": ".view.WelcomeActivityAlias",
             # "autoGrantPermissions": True,
-            # "unicodeKeyboard": True
+            "unicodeKeyboard": True,
             # 保留之前执行的数据，可以用于case依赖
             "noReset": True
         }
