@@ -1,16 +1,22 @@
 # !/usr/bin/env python
 # encoding: utf-8
+from selenium.webdriver.common.by import By
+
 from page_object.drivers.Xueqiu_client import XueqiuClient
+from page_object.pages.BasePage import BasePage
+from page_object.pages.ProfilePage import ProfilePage
 from page_object.pages.Selected_page import Selected_Page
 
 
-class MainPage(object):
 
-    def __init__(self):
-        XueqiuClient.restart_app()
-
-    def ClickSelected(self,SelectedName):
-        XueqiuClient.driver.find_element_by_xpath("//*[@text='"+SelectedName+"']")
-        XueqiuClient.driver.find_element_by_xpath("//*[@text='" + SelectedName + "']").click()
-
+class MainPage(BasePage):
+    _profile_btn=(By.ID,"user_profile_icon")
+    def Click_market(self):
+        hangqing = "行情"
+        self.findByText(self.hangqing)
+        self.findByText(self.hangqing).click()
         return Selected_Page()
+
+    def Click_profile(self):
+        self.find(self._profile_btn).click()
+        return ProfilePage()
